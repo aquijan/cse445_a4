@@ -1,1 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Hotels>
+  <Hotel Rating="4.5">
+    <Name>Sunset Inn</Name>
+    <Phone>480-555-0100</Phone>
+    <Phone>480-555-0101</Phone>
+    <Address>
+      <Number>123</Number>
+      <Street>Main St</Street>
+      <City>Tempe</City>
+      <State>AZ</State>
+      <Zip>85281</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    </Address>
+  </Hotel>
+  <Hotel>
+    <Name>Desert Oasis</Name>
+    <Phone>602-555-0110</Phone>
+    <Address>
+      <Number>45</Number>
+      <Street>Palm Ave</Street>
+      <City>Phoenix</City>
+      <State>AZ</State>
+      <Zip>85004</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    </Address>
+    <Rating>4.2</Rating>
+  </Hotel>
+  <Hotel>
+    <Name>Riverbend Lodge</Name>
+    <Phone>928-555-0115</Phone>
+    <Address>
+      <Number>789</Number>
+      <Street>River Rd</Street>
+      <City>Flagstaff</City>
+      <State>AZ</State>
+      <Zip>86001</Zip>
+      <NearestAirport>FLG</NearestAirport>
+    </Address>
+  </Hotel>
+</Hotels>
 
