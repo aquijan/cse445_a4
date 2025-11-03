@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotels>
+<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="https://aquijan.github.io/cse445_a4/Hotels.xsd https://aquijan.github.io/cse445_a4/Hotels.xsd">
+
   <Hotel Rating="4.5">
     <Name>Sunset Inn</Name>
     <Phone>480-555-0100</Phone>
@@ -13,6 +15,7 @@
       <NearestAirport>PHX</NearestAirport>
     </Address>
   </Hotel>
+
   <Hotel>
     <Name>Desert Oasis</Name>
     <Phone>602-555-0110</Phone>
@@ -26,6 +29,7 @@
     </Address>
     <Rating>4.2</Rating>
   </Hotel>
+
   <Hotel>
     <Name>Riverbend Lodge</Name>
     <Phone>928-555-0115</Phone>
@@ -38,5 +42,98 @@
       <NearestAirport>FLG</NearestAirport>
     </Address>
   </Hotel>
-</Hotels>
 
+  <Hotel Rating="3.9">
+    <Name>Copper Canyon Hotel</Name>
+    <Phone>520-555-0120</Phone>
+    <Address>
+      <Number>800</Number>
+      <Street>Canyon Blvd</Street>
+      <City>Tucson</City>
+      <State>AZ</State>
+      <Zip>85701</Zip>
+      <NearestAirport>TUS</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Skyline Suites</Name>
+    <Phone>480-555-0130</Phone>
+    <Phone>480-555-0131</Phone>
+    <Address>
+      <Number>300</Number>
+      <Street>Skyline Dr</Street>
+      <City>Scottsdale</City>
+      <State>AZ</State>
+      <Zip>85251</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    </Address>
+    <Rating>4.8</Rating>
+  </Hotel>
+
+  <Hotel>
+    <Name>Red Rock Retreat</Name>
+    <Phone>928-555-0135</Phone>
+    <Address>
+      <Number>77</Number>
+      <Street>Red Rock Way</Street>
+      <City>Sedona</City>
+      <State>AZ</State>
+      <Zip>86336</Zip>
+      <NearestAirport>FLG</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="4.0">
+    <Name>Mesquite Springs</Name>
+    <Phone>520-555-0140</Phone>
+    <Address>
+      <Number>160</Number>
+      <Street>Mesquite Ln</Street>
+      <City>Tucson</City>
+      <State>AZ</State>
+      <Zip>85719</Zip>
+      <NearestAirport>TUS</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Grand Vista</Name>
+    <Phone>928-555-0145</Phone>
+    <Address>
+      <Number>2500</Number>
+      <Street>Vista Ave</Street>
+      <City>Page</City>
+      <State>AZ</State>
+      <Zip>86040</Zip>
+      <NearestAirport>PGA</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel Rating="3.7">
+    <Name>Cactus Court</Name>
+    <Phone>623-555-0150</Phone>
+    <Address>
+      <Number>98</Number>
+      <Street>Cactus Rd</Street>
+      <City>Glendale</City>
+      <State>AZ</State>
+      <Zip>85301</Zip>
+      <NearestAirport>PHX</NearestAirport>
+    </Address>
+  </Hotel>
+
+  <Hotel>
+    <Name>Silver Spur Hotel</Name>
+    <Phone>520-555-0155</Phone>
+    <Address>
+      <Number>410</Number>
+      <Street>Spur St</Street>
+      <City>Sierra Vista</City>
+      <State>AZ</State>
+      <Zip>85635</Zip>
+      <NearestAirport>TUS</NearestAirport>
+    </Address>
+  </Hotel>
+
+</Hotels>
