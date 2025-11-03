@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="https://aquijan.github.io/cse445_a4/Hotels.xsd https://aquijan.github.io/cse445_a4/Hotels.xsd">
+<Hotels xmlns="http://asu.edu/cse445/hotels"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://asu.edu/cse445/hotels https://aquijan.github.io/cse445_a4/Hotels.xsd">
 
   <Hotel Rating="4.5">
     <Name>Sunset Inn</Name>
