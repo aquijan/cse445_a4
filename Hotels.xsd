@@ -1,139 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Hotels xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="https://aquijan.github.io/cse445_a4/Hotels.xsd">
-
-  <Hotel Rating="4.5">
-    <Name>Sunset Inn</Name>
-    <Phone>480-555-0100</Phone>
-    <Phone>480-555-0101</Phone>
-    <Address>
-      <Number>123</Number>
-      <Street>Main St</Street>
-      <City>Tempe</City>
-      <State>AZ</State>
-      <Zip>85281</Zip>
-      <NearestAirport>PHX</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <Hotel>
-    <Name>Desert Oasis</Name>
-    <Phone>602-555-0110</Phone>
-    <Address>
-      <Number>45</Number>
-      <Street>Palm Ave</Street>
-      <City>Phoenix</City>
-      <State>AZ</State>
-      <Zip>85004</Zip>
-      <NearestAirport>PHX</NearestAirport>
-    </Address>
-    <Rating>4.2</Rating>
-  </Hotel>
-
-  <Hotel>
-    <Name>Riverbend Lodge</Name>
-    <Phone>928-555-0115</Phone>
-    <Address>
-      <Number>789</Number>
-      <Street>River Rd</Street>
-      <City>Flagstaff</City>
-      <State>AZ</State>
-      <Zip>86001</Zip>
-      <NearestAirport>FLG</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <Hotel Rating="3.9">
-    <Name>Copper Canyon Hotel</Name>
-    <Phone>520-555-0120</Phone>
-    <Address>
-      <Number>800</Number>
-      <Street>Canyon Blvd</Street>
-      <City>Tucson</City>
-      <State>AZ</State>
-      <Zip>85701</Zip>
-      <NearestAirport>TUS</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <Hotel>
-    <Name>Skyline Suites</Name>
-    <Phone>480-555-0130</Phone>
-    <Phone>480-555-0131</Phone>
-    <Address>
-      <Number>300</Number>
-      <Street>Skyline Dr</Street>
-      <City>Scottsdale</City>
-      <State>AZ</State>
-      <Zip>85251</Zip>
-      <NearestAirport>PHX</NearestAirport>
-    </Address>
-    <Rating>4.8</Rating>
-  </Hotel>
-
-  <Hotel>
-    <Name>Red Rock Retreat</Name>
-    <Phone>928-555-0135</Phone>
-    <Address>
-      <Number>77</Number>
-      <Street>Red Rock Way</Street>
-      <City>Sedona</City>
-      <State>AZ</State>
-      <Zip>86336</Zip>
-      <NearestAirport>FLG</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <Hotel Rating="4.0">
-    <Name>Mesquite Springs</Name>
-    <Phone>520-555-0140</Phone>
-    <Address>
-      <Number>160</Number>
-      <Street>Mesquite Ln</Street>
-      <City>Tucson</City>
-      <State>AZ</State>
-      <Zip>85719</Zip>
-      <NearestAirport>TUS</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <Hotel>
-    <Name>Grand Vista</Name>
-    <Phone>928-555-0145</Phone>
-    <Address>
-      <Number>2500</Number>
-      <Street>Vista Ave</Street>
-      <City>Page</City>
-      <State>AZ</State>
-      <Zip>86040</Zip>
-      <NearestAirport>PGA</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <Hotel Rating="3.7">
-    <Name>Cactus Court</Name>
-    <Phone>623-555-0150</Phone>
-    <Address>
-      <Number>98</Number>
-      <Street>Cactus Rd</Street>
-      <City>Glendale</City>
-      <State>AZ</State>
-      <Zip>85301</Zip>
-      <NearestAirport>PHX</NearestAirport>
-    </Address>
-  </Hotel>
-
-  <Hotel>
-    <Name>Silver Spur Hotel</Name>
-    <Phone>520-555-0155</Phone>
-    <Address>
-      <Number>410</Number>
-      <Street>Spur St</Street>
-      <City>Sierra Vista</City>
-      <State>AZ</State>
-      <Zip>85635</Zip>
-      <NearestAirport>TUS</NearestAirport>
-    </Address>
-  </Hotel>
-
-</Hotels>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="Hotels">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Hotel" maxOccurs="unbounded" minOccurs="1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Name" type="xs:string"/>
+              <xs:element name="Phone" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+              <xs:element name="Address">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Number" type="xs:string"/>
+                    <xs:element name="Street" type="xs:string"/>
+                    <xs:element name="City" type="xs:string"/>
+                    <xs:element name="State">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="[A-Z]{2}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="Zip">
+                      <xs:simpleType>
+                        <xs:restriction base="xs:string">
+                          <xs:pattern value="\d{5}"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="NearestAirport" type="xs:string"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="Rating" type="xs:string" minOccurs="0"/>
+            </xs:sequence>
+            <xs:attribute name="Rating" type="xs:string" use="optional"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
